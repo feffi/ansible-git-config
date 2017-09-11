@@ -1,7 +1,7 @@
 ---
 - debug:
     msg: "{{ vars[(role_path | basename).split('.')[-1].replace('-','_').replace('ansible_','')] }}"
-  when: DEBUG | bool | default(false)
+  when: DEBUG | d() | bool
 
 - include: config.yml
 - include: ignores.yml
