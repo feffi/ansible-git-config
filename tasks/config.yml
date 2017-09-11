@@ -1,0 +1,6 @@
+---
+- name: Configure the users .gitconfig file
+  template:
+    src: "gitconfig.j2"
+    dest: "~/.gitconfig"
+  when: git_config | bool

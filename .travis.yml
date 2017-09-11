@@ -1,0 +1,20 @@
+---
+language: objective-c
+
+cache: pip
+
+os:
+  - osx
+  - linux
+
+osx_image: xcode9
+
+install:
+    - sudo -H easy_install pip
+    - sudo -H pip install -I ansible==2.3.2.0
+    - mkdir -p /tmp/roles
+    - "{ echo '[defaults]'; echo 'roles_path = ../:/tmp/roles'; } >> ansible.cfg"
+
+script:
+  - "ansible-playbook -i tests/inventory tests/travis.yml --syntax-check"
+  - "ansible-playbook -i tests/inventory tests/travis.yml --connection=local"

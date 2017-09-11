@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Kevin Wennemuth
+  description: Configures the global gitconfig and .gitignore.
+  license: MIT
+  min_ansible_version: 2.3
+  platforms:
+  - name: Darwin
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+    - development
+    - system
+    - packaging
+dependencies: []
