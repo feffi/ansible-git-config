@@ -24,7 +24,6 @@ gitconfig:
 Example:
 
 ```yaml
-
 - hosts: all
   vars:
     gitconfig:
