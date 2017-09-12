@@ -3,4 +3,4 @@
   template:
     src: "gitconfig.j2"
     dest: "~/.gitconfig"
-  when: git_config | bool
+  when: git_config.config | bool
