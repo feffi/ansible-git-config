@@ -3,4 +3,4 @@
   template:
     src: "gitignore.j2"
     dest: "{{ gitconfig.config.core.excludesfile }}"
-  when: gitconfig.config.ignores and gitconfig.config.core is defined and gitconfig.config.core.excludesfile is defined
+  when: gitconfig.ignores and gitconfig.config.core is defined and gitconfig.config.core.excludesfile is defined

@@ -1,3 +1,5 @@
-{% for ignore in gitignore.ignores %}
+# BEGIN ANSIBLE MANAGED BLOCK
+{% for ignore in gitconfig.ignores %}
 {{ ignore }}
 {% endfor %}
+# END ANSIBLE MANAGED BLOCK

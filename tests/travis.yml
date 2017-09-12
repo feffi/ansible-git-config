@@ -1,5 +1,14 @@
 ---
 - hosts: 127.0.0.1
   connection: local
+  vars:
+    gitconfig:
+      config:
+        user:
+          name: Your Name
+          email: your-email@example.com
+      ignores:
+        - ".vagrant"
+        - ".DS_Store"
   roles:
     - ansible-gitconfig
