@@ -14,8 +14,9 @@ galaxy_info:
   - name: Debian
     versions:
     - all
-  categories:
-    - development
+  galaxy_tags:
     - system
-    - packaging
+    - osx
+    - git
+    - config
 dependencies: []
