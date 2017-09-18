@@ -1,5 +1,5 @@
 # BEGIN ANSIBLE MANAGED BLOCK
-{% for section, values in gitconfig.config.iteritems() %}
+{% for section, values in git_config.config.iteritems() %}
 [{{ section }}]
 {% for key, value in values.iteritems() %}
     {{ key }} = {{ value }}

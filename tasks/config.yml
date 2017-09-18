@@ -3,4 +3,4 @@
   template:
     src: "gitconfig.j2"
     dest: "{{ ansible_env.HOME + '/.gitconfig' }}"
-  when: gitconfig.config
+  when: git_config.config

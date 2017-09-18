@@ -2,5 +2,5 @@
 - name: Setup the users global .gitignore file
   template:
     src: "gitignore.j2"
-    dest: "{{ gitconfig.config.core.excludesfile }}"
-  when: gitconfig.ignores and gitconfig.config.core is defined and gitconfig.config.core.excludesfile is defined
+    dest: "{{ git_config.config.core.excludesfile }}"
+  when: git_config.ignores and git_config.config.core is defined and git_config.config.core.excludesfile is defined

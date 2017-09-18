@@ -2,7 +2,7 @@
 - hosts: 127.0.0.1
   connection: local
   vars:
-    gitconfig:
+    git_config:
       config:
         user:
           name: Your Name
@@ -11,4 +11,4 @@
         - ".vagrant"
         - ".DS_Store"
   roles:
-    - ansible-gitconfig
+    - ansible-git-config

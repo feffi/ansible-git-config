@@ -1,5 +1,5 @@
 ---
-gitconfig:
+git_config:
   # Sections and key-value pairs to include in the users .gitconfig
   config:
     core:
