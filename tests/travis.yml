@@ -11,4 +11,4 @@
         - ".vagrant"
         - ".DS_Store"
   roles:
-    - ansible-git-config
+    - { role: ansible-git-config }
