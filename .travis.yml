@@ -1,13 +1,14 @@
 ---
 language: objective-c
-
 cache: pip
-
 os:
   - osx
   - linux
-
-osx_image: xcode9
+rvm: 2.3.1
+osx_image:
+  - xcode9
+  - xcode9.1
+  - xcode9.2
 
 install:
     - sudo -H easy_install pip
