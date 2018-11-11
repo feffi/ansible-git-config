@@ -2,5 +2,5 @@
 - name: Setup the users global .gitignore file
   template:
     src: "gitignore.j2"
-    dest: "{{ git_config.config.core.excludesfile }}"
-  when: git_config.ignores and git_config.config.core is defined and git_config.config.core.excludesfile is defined
+    dest: "{{ ansible_git_config.config.core.excludesfile }}"
+  when: ansible_git_config.ignores and ansible_git_config.config.core is defined and ansible_git_config.config.core.excludesfile is defined

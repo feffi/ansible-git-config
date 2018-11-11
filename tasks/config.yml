@@ -2,5 +2,5 @@
 - name: Configure the users .gitconfig file
   template:
     src: "gitconfig.j2"
-    dest: "{{ ansible_env.HOME + '/.gitconfig' }}"
-  when: git_config.config
+    dest: "{{ ansible_git_config.dest }}"
+  when: ansible_git_config.config is defined and (ansible_git_config.config | length > 0)

@@ -1,7 +1,7 @@
 # BEGIN ANSIBLE MANAGED BLOCK
-{% for section, values in git_config.config.iteritems() %}
+{% for section, values in ansible_git_config.config.items() %}
 [{{ section }}]
-{% for key, value in values.iteritems() %}
+{% for key, value in values.items() %}
     {{ key }} = {{ value }}
 {% endfor %}
 {% endfor %}

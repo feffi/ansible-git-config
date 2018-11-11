@@ -1,8 +1,13 @@
 ---
-git_config:
+ansible_git_config: {
+  # The target file to put the config in
+  dest: "/home/feffi/.gitconfig",
   # Sections and key-value pairs to include in the users .gitconfig
-  config:
-    core:
+  config: {
+    core: {
       excludesfile: "~/.gitignore"
+    }
+  },
   # Lines to be included in users global .gitignore file
   ignores: []
+}

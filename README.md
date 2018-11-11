@@ -7,17 +7,20 @@ Ansible role to configure the global gitconfig and .gitignore.
 
 ```yaml
 # Sections and key-value pairs to include in the users .git-config
-git_config:
-  config:
-    <section>:
-      <key>: <value>
-      <key>: <value>
+ansible_git_config: {
+  dest: "/home/feffi/.gitconfig",
+  config: {
+    <section>: {
+      <key>: <value>,
+      <key>: <value>,
       ...
-
+    }
+  },
   # Lines to be included in users global .gitignore file
-  ignores:
-    - ".vagrant"
-    - ".DS_Store"
+  ignores: [
+    ".vagrant"
+    ".DS_Store"
+  ]
 ```
 
 Example:
@@ -25,14 +28,15 @@ Example:
 ```yaml
 - hosts: all
   vars:
-    git_config:
+    ansible_git_config:
+      dest: "/home/feffi/.gitconfig"
       config:
         user:
           name: Your Name
-          email: your-email@exemple.org
+          email: your-email@example.org
       ignores:
         - ".vagrant"
         - ".DS_Store"
   roles:
-    - { role: feffi.git-config }
+    - { role: ansible-git-config }
 ```
