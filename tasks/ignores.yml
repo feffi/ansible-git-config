@@ -3,4 +3,4 @@
   template:
     src: "gitignore.j2"
     dest: "{{ ansible_git_config.config.core.excludesfile }}"
-  when: ansible_git_config.ignores and ansible_git_config.config.core is defined and ansible_git_config.config.core.excludesfile is defined
+  #when: ansible_git_config.ignores and ansible_git_config.config.core is defined and ansible_git_config.config.core.excludesfile is defined

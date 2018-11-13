@@ -5,7 +5,7 @@ ansible_git_config: {
   # Sections and key-value pairs to include in the users .gitconfig
   config: {
     core: {
-      excludesfile: "~/.gitignore"
+      excludesfile: ""
     }
   },
   # Lines to be included in users global .gitignore file
